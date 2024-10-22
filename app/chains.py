@@ -32,7 +32,7 @@ class Chain:
             raise OutputParserException("Context too big. Unable to parse jobs.")
         return res if isinstance(res, list) else [res]
 
-    def write_mail(self, job, links):
+    def write_mail(self, job):
         prompt_email = PromptTemplate.from_template(
             """
             ### JOB DESCRIPTION:
@@ -82,7 +82,7 @@ Create a personalized, enthusiastic cover letter highlighting the candidate's pa
             """
         )
         chain_email = prompt_email | self.llm
-        res = chain_email.invoke({"job_description": str(job), "link_list": links})
+        res = chain_email.invoke({"job_description": str(job)})
         return res.content
 
 if __name__ == "__main__":

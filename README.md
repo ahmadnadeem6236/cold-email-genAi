@@ -11,7 +11,7 @@ Cold email or cover letter generator for services company using groq, langchain 
 
 ## Architecture Diagram
 
-![img.png](imgs/architecture.png)
+![img.png](imgs/archimg.png)
 
 ## Set-up
 

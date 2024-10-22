@@ -4,8 +4,8 @@ Cold email or cover letter generator for services company using groq, langchain 
 
 **Imagine a scenario:**
 
-- Nike needs a Principal Software Engineer and is spending time and resources in the hiring process, on boarding, training etc
-- Atliq is Software Development company can provide a dedicated software development engineer to Nike. So, the business development executive (Mohan) from Atliq is going to reach out to Nike via a cold email.
+- A developer or student needs an Internship as Software Engineer and he spends his time to writing lots of cold emails and cover letters for job listing. This makes hectic process and writing according to the jobs requirement is hard.
+- This application helps a student or developer to write cold mails and cover letter for higher probability of getting selected.
 
 ![img.png](imgs/img.png)
 

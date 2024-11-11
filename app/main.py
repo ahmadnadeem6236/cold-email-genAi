@@ -7,13 +7,13 @@ from utils import clean_text
 
 def create_streamlit_app(llm,  clean_text):
     st.title("📧 Cold Mail or Cover Letter Generator")
-    url_input = st.text_input("Enter a URL:", value="")
+    text_input = st.text_area("Enter job description:")
     submit_button = st.button("Submit")
 
     if submit_button:
         try:
-            loader = WebBaseLoader([url_input])
-            data = clean_text(loader.load().pop().page_content)
+            print(text_input)
+            data = clean_text(text_input)
             jobs = llm.extract_jobs(data)
             for job in jobs:
                 skills = job.get('skills', [])

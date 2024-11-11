@@ -39,7 +39,7 @@ class Chain:
             {job_description}
 
             ### INSTRUCTION:
-           Write a professional job application for a software development or full-stack developer position using the following details:
+           Write a professional job application for a above job description using the following details:
 
 Name: Nadeem Ahmad
 
@@ -63,7 +63,7 @@ Tools: VSCode, Vim, Git/GitHub, MySQL Workbench, Atlas.
 Experience:
 
 Full Stack Intern at Candidate.live (July 2024 - October 2024):
-Designed and implemented user interfaces, achieving an 80% faster load time.
+Designed and implemented user interfaces, achieving an 80 per cent faster load time.
 Supported back-end tasks, reducing latency by 20%.
 Identified and resolved bugs, improving codebase organization by 60%.
 Participated in code reviews.

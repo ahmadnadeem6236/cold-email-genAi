@@ -7,18 +7,17 @@ from utils import clean_text
 
 def create_streamlit_app(llm,  clean_text):
     st.title("📧 Cold Mail or Cover Letter Generator")
-    text_input = st.text_area("Enter job description:")
+    st.subheader("Please enter job decription", divider=True)
+    text_input = st.text_area("")
     submit_button = st.button("Submit")
 
     if submit_button:
         try:
             print(text_input)
             data = clean_text(text_input)
-            jobs = llm.extract_jobs(data)
-            for job in jobs:
-                skills = job.get('skills', [])
-                email = llm.write_mail(job)
-                st.code(email, language='markdown')
+            job = llm.extract_jobs(data)
+            email = llm.write_mail(job)
+            st.code(email, language='markdown')
         except Exception as e:
             st.error(f"An Error Occurred: {e}")
 

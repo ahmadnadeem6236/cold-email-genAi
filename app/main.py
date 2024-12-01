@@ -3,6 +3,7 @@ from langchain_community.document_loaders import WebBaseLoader
 
 from chains import Chain
 from utils import clean_text
+from utils import calculate_similarity
 
 
 def create_streamlit_app(llm,  clean_text):
@@ -13,11 +14,14 @@ def create_streamlit_app(llm,  clean_text):
 
     if submit_button:
         try:
-            print(text_input)
             data = clean_text(text_input)
             job = llm.extract_jobs(data)
             email = llm.write_mail(job)
+            if data:
+               accuracy = calculate_similarity(data, email)
+               print(accuracy)
             st.code(email, language='markdown')
+            st.code(accuracy, language='markdown')
         except Exception as e:
             st.error(f"An Error Occurred: {e}")
 
